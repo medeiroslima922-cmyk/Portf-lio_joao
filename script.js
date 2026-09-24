@@ -76,8 +76,8 @@ const projects = [
         title: "SempreON",
         description: "Projeto desenvolvido para divulgar os serviços da SempreON, empresa especializada em automação residencial.Foram implementadas páginas responsivas, design moderno, animações, navegação fluida e integração com WhatsApp.",
         image: "assets/images/project-1.png",
-        techs: [": JavaScript, HTML, CSS, Responsividade, Animações, Integração com WhatsApp"],
-        github: "https://github.com/medeiroslima922-cmyk/SempreON"
+        techs: ["JavaScript", "HTML", "CSS", "Responsividade", "Animações", "Integração com WhatsApp"],
+        github: "https://github.com/medeiroslima922-cmyk/SempreON",
         demo: ""
     },
     {
