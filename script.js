@@ -73,12 +73,11 @@ const softSkills = [
    ========================================== */
 const projects = [
     {
-        title: "API de Gerenciamento",
-        description: "API REST construída com Ruby on Rails para gerenciamento de recursos com autenticação e CRUD completo.",
+        title: "SempreON",
+        description: "Projeto desenvolvido para divulgar os serviços da SempreON, empresa especializada em automação residencial.Foram implementadas páginas responsivas, design moderno, animações, navegação fluida e integração com WhatsApp.",
         image: "assets/images/project-1.png",
-        techs: ["Ruby on Rails", "PostgreSQL", "API REST"],
-        github: "https://github.com/seu-usuario/projeto-1",
-        // Deixe vazio ("") se não tiver deploy
+        techs: [": JavaScript, HTML, CSS, Responsividade, Animações, Integração com WhatsApp"],
+        github: "https://github.com/medeiroslima922-cmyk/SempreON"
         demo: ""
     },
     {
