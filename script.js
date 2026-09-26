@@ -81,11 +81,11 @@ const projects = [
         demo: ""
     },
     {
-        title: "Sistema de Tarefas",
-        description: "Aplicação web para gerenciamento de tarefas com sistema de categorias e status, seguindo o padrão MVC.",
-        image: "assets/images/project-2.png",
-        techs: ["Ruby on Rails", "PostgreSQL", "MVC"],
-        github: "https://github.com/seu-usuario/projeto-2",
+        title: "Controle de Gastos",
+        description: "Aplicação web para gerenciamento de despesas com sistema de categorias e status, seguindo o padrão MVC.",
+        image: "assets/images/login-bg.png",
+        techs: ["Ruby on Rails", "PostgreSQL", "MVC", "Supabase", "Render"],
+        github: "https://controle-gastos-8q0i.onrender.com/login",
         demo: ""
     },
     {
