@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de João Carlos Vidal — Desenvolvedor Back-end Júnior especializado em Ruby on Rails, JavaScript, PostgreSQL e APIs REST.">
-    <meta name="keywords" content="desenvolvedor, back-end, Ruby, Rails, JavaScript, portfólio, João Carlos Vidal">
+    <meta name="description" content="Portfólio de João Carlos Vidal — Desenvolvedor Back-end Júnior com projetos em Ruby on Rails, C#/.NET, PostgreSQL e APIs REST.">
+    <meta name="keywords" content="desenvolvedor back-end, Ruby on Rails, C#, .NET, PostgreSQL, APIs REST, portfólio, João Carlos Vidal">
     <meta name="author" content="João Carlos Vidal">
     
     <title>João Carlos Vidal | Desenvolvedor Back-end Júnior</title>
@@ -29,13 +29,14 @@
             <nav class="navbar__menu" id="navMenu">
                 <a href="#hero" class="navbar__link active">Início</a>
                 <a href="#about" class="navbar__link">Sobre</a>
+                <a href="#experience" class="navbar__link">Experiência</a>
                 <a href="#skills" class="navbar__link">Habilidades</a>
                 <a href="#projects" class="navbar__link">Projetos</a>
                 <a href="#contact" class="navbar__link">Contato</a>
             </nav>
             <a href="#contact" class="navbar__cta btn btn--primary btn--sm">Contato</a>
             <!-- Botão mobile hamburger -->
-            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -58,8 +59,9 @@
                     Desenvolvedor Back-end Júnior
                 </p>
                 <p class="hero__description animate-on-scroll">
-                    Estudante de Análise e Desenvolvimento de Sistemas na UNINASSAU e desenvolvedor Back-end Júnior, com foco em Ruby on Rails, PostgreSQL, JavaScript e APIs REST. 
-                    Busco transformar conhecimentos em soluções web funcionais, organizadas e eficientes.
+                    Desenvolvedor back-end júnior e estudante de Análise e Desenvolvimento de Sistemas,
+                    com projetos reais em Ruby on Rails, C#/.NET e PostgreSQL. Transformo requisitos em
+                    aplicações organizadas, testáveis e prontas para evoluir.
                 </p>
                 <div class="hero__actions animate-on-scroll">
                     <a href="#contact" class="btn btn--primary">
@@ -70,7 +72,6 @@
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                         Ver projetos
                     </a>
-                    <!-- EDITE: Coloque seu link do GitHub abaixo -->
                     <a href="https://github.com/medeiroslima922-cmyk" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" aria-label="Acessar GitHub de João Carlos Vidal">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -81,9 +82,9 @@
                 <!-- Indicadores de tecnologia -->
                 <div class="hero__tech-badges animate-on-scroll">
                     <span class="tech-badge">Ruby on Rails</span>
+                    <span class="tech-badge">C# / .NET</span>
                     <span class="tech-badge">PostgreSQL</span>
                     <span class="tech-badge">API REST</span>
-                    <span class="tech-badge">JavaScript</span>
                 </div>
             </div>
             <div class="hero__image-wrapper animate-on-scroll">
@@ -130,26 +131,21 @@
             <div class="about__grid">
                 <div class="about__text animate-on-scroll">
                     <p>
-                        Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> 
-                        na UNINASSAU, apaixonado por desenvolvimento back-end e pela criação de 
-                        aplicações web eficientes e bem estruturadas.
+                        Sou estudante de <strong>Análise e Desenvolvimento de Sistemas na UNINASSAU</strong>
+                        e desenvolvedor back-end júnior, com experiência prática em aplicações web,
+                        bancos de dados relacionais e integrações por APIs.
                     </p>
                     <p>
-                        Meu foco está no desenvolvimento <strong>back-end</strong>, utilizando <strong>Ruby on Rails, JavaScript, bancos de dados relacionais e APIs REST</strong>.
-                         Busco aprimorar continuamente meus conhecimentos em <strong>boas práticas de programação,
-                          arquitetura MVC e Programação Orientada a Objetos (POO)</strong>,
-                           desenvolvendo soluções web organizadas, eficientes e funcionais. Tenho perfil <strong>proativo, comprometido e orientado ao aprendizado contínuo</strong>, com interesse em evoluir tecnicamente, resolver problemas e transformar conhecimentos em soluções práticas.
-
+                        Desenvolvi e publiquei uma aplicação em <strong>Ruby on Rails</strong>, construí uma
+                        plataforma em <strong>ASP.NET Core e Blazor Server</strong> e entreguei um site responsivo
+                        para uma empresa real. Trabalho com arquitetura MVC, POO, Git e testes automatizados.
                     </p>
                     <p>
-                        Atualmente, estou em busca de uma <strong>oportunidade como 
-                        Desenvolvedor  Júnior</strong>, onde possa contribuir com 
-                        minhas habilidades técnicas e crescer profissionalmente em um 
-                        ambiente colaborativo.
+                        Minha vivência no setor de medição de energia fortaleceu minha atenção a processos,
+                        documentação e qualidade. Busco minha primeira oportunidade em desenvolvimento para
+                        contribuir com código organizado e evoluir em equipe.
                     </p>
-                    <!-- Botão para download de currículo -->
-                    <!-- EDITE: Adicione o link para seu currículo em PDF -->
-                    <a href="#" class="btn btn--primary" style="margin-top: 1.5rem;">
+                    <a href="assets/Curriculo_Joao_Carlos.pdf" download class="btn btn--primary about__cv-button">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Download CV
                     </a>
@@ -170,7 +166,7 @@
                         </div>
                         <div>
                             <h4>Foco</h4>
-                            <p>Desenvolvimento Back-end Junior</p>
+                            <p>Ruby on Rails, C#/.NET, PostgreSQL e APIs REST</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -178,9 +174,8 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
                         <div>
-                            <h4>E-mail</h4>
-                            <!-- EDITE: Troque pelo seu e-mail -->
-                            <p>medeiroslima922@gmail.com</p>
+                            <h4>Experiência atual</h4>
+                            <p>Assistente de Suporte Técnico — Eletra Energy</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -188,9 +183,8 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 1 1 8.5-8.5c0 1.5-.4 2.9-1.1 4.1L21 21l-4.3-1.6"/><path d="M8 9.5c.2 1.8 1.7 3.5 3.5 4s3.2-.2 4-1.2"/></svg>
                         </div>
                         <div>
-                            <h4>WhatsApp</h4>
-                            <!-- EDITE: Troque pelo seu número, com DDI e DDD -->
-                            <p>+55 (85) 99280-6240</p>
+                            <h4>Disponibilidade</h4>
+                            <p>Em busca de oportunidade como Desenvolvedor Back-end Júnior</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -208,9 +202,32 @@
         </div>
     </section>
 
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Experiência</span>
+                <h2 class="section-title">Vivência Técnica<br>com <span class="text-gradient">Responsabilidade</span></h2>
+            </div>
+            <article class="experience-card animate-on-scroll">
+                <div class="experience-card__meta">
+                    <span class="experience-card__period">Jun 2024 — atual</span>
+                    <span class="experience-card__location">Fortaleza, CE</span>
+                </div>
+                <div class="experience-card__content">
+                    <p class="experience-card__company">Eletra Energy</p>
+                    <h3>Assistente de Suporte Técnico</h3>
+                    <ul>
+                        <li>Criação e atualização de fichas técnicas, com foco em padronização e precisão das informações.</li>
+                        <li>Preparação e análise de amostras de medidores eletrônicos em processos técnicos e de homologação.</li>
+                        <li>Emissão de notas fiscais e apoio a rotinas administrativas utilizando o sistema TOTVS.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- ========================================
          HABILIDADES — Tecnologias e Soft Skills
-         Os dados são carregados via JavaScript (script.js)
     ======================================== -->
     <section class="skills" id="skills">
         <div class="container">
@@ -218,7 +235,7 @@
                 <span class="section-tag">Habilidades</span>
                 <h2 class="section-title">Tecnologias &<br><span class="text-gradient">Competências</span></h2>
             </div>
-            <!-- Os cards são renderizados pelo JavaScript -->
+            <!-- Os cards são renderizados pelo arquivo de interações -->
             <div class="skills__grid" id="skillsGrid">
                 <!-- Renderizado dinamicamente -->
             </div>
@@ -235,7 +252,6 @@
 
     <!-- ========================================
          PROJETOS — Portfólio de trabalhos
-         Os dados são carregados via JavaScript (script.js)
     ======================================== -->
     <section class="projects" id="projects">
         <div class="container">
@@ -272,7 +288,7 @@
                     </div>
                     <div class="form-group">
                         <label for="formEmail">E-mail</label>
-                        <input type="email" id="formEmail" name="email" placeholder="seuemail@email.com" required>
+                        <input type="email" id="formEmail" name="email" placeholder="nome@empresa.com" required>
                         <span class="form-error" id="formEmailError"></span>
                     </div>
                     <div class="form-group">
@@ -282,11 +298,11 @@
                     </div>
                     <button type="submit" class="btn btn--primary btn--full" id="formSubmit">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                        Enviar mensagem
+                        Preparar e-mail
                     </button>
                     <div class="form-success" id="formSuccess">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        Mensagem enviada com sucesso!
+                        Seu aplicativo de e-mail foi aberto com a mensagem preparada.
                     </div>
                 </form>
 
@@ -296,7 +312,6 @@
                     <p>Estou sempre aberto a novas oportunidades e conversas sobre tecnologia.</p>
                     
                     <div class="contact__links">
-                        <!-- EDITE: Troque os links abaixo pelos seus -->
                         <a href="https://github.com/medeiroslima922-cmyk" target="_blank" rel="noopener" class="contact__link-card" id="contactGithub">
                             <div class="contact__link-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -313,16 +328,24 @@
                             <div>
                                 <h4>LinkedIn</h4>
                                 <p>linkedin.com/in/carlos-vidal-129b84247/</p>
-                            </div
+                            </div>
                         </a>
-                        <a href="mailton:medeiroslima922@gmail.com" class="contact__link-card" id="contactEmail">
+                        <a href="mailto:medeiroslima922@gmail.com" class="contact__link-card" id="contactEmail">
                             <div class="contact__link-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div>
                                 <h4>E-mail</h4>
-                                <!-- EDITE: Troque pelo seu e-mail -->
                                 <p>medeiroslima922@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/5585992806240" target="_blank" rel="noopener" class="contact__link-card">
+                            <div class="contact__link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 1 1 8.5-8.5c0 1.5-.4 2.9-1.1 4.1L21 21l-4.3-1.6"/><path d="M8 9.5c.2 1.8 1.7 3.5 3.5 4s3.2-.2 4-1.2"/></svg>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+55 (85) 99280-6240</p>
                             </div>
                         </a>
                     </div>
@@ -343,6 +366,7 @@
             <div class="footer__links">
                 <a href="#hero">Início</a>
                 <a href="#about">Sobre</a>
+                <a href="#experience">Experiência</a>
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Projetos</a>
                 <a href="#contact">Contato</a>
@@ -353,7 +377,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Interações -->
     <script src="script.js"></script>
 </body>
 </html>

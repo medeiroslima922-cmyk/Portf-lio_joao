@@ -25,26 +25,26 @@ const skillCategories = [
     {
         icon: "💎",
         title: "Back-end & Frameworks",
-        description: "Desenvolvimento de APIs e aplicações web server-side com foco em boas práticas e padrão MVC.",
-        tags: ["Ruby", "Ruby on Rails", "Node.js (básico)", "APIs REST", "CRUD", "MVC", "POO"]
+        description: "Desenvolvimento de aplicações web e APIs com arquitetura MVC, regras de negócio e código organizado.",
+        tags: ["Ruby", "Ruby on Rails", "C#", ".NET", "ASP.NET Core", "Blazor Server", "APIs REST", "MVC", "POO"]
     },
     {
         icon: "🗄️",
         title: "Banco de Dados",
-        description: "Modelagem e manipulação de bancos de dados relacionais com consultas SQL.",
-        tags: ["PostgreSQL", "MySQL", "SQL", "Bancos Relacionais"]
+        description: "Modelagem e manipulação de dados relacionais, do desenvolvimento local à publicação em nuvem.",
+        tags: ["PostgreSQL", "MySQL", "SQL", "Entity Framework Core", "Active Record", "Supabase"]
     },
     {
         icon: "🌐",
-        title: "Front-end & Web",
-        description: "Fundamentos de desenvolvimento web para construção de interfaces funcionais.",
-        tags: ["HTML5", "CSS3", "JavaScript", "TypeScript (aprendendo)"]
+        title: "Interfaces & Qualidade",
+        description: "Construção de interfaces responsivas e validação do comportamento das aplicações.",
+        tags: ["HTML5", "CSS3", "Design responsivo", "xUnit", "Acessibilidade"]
     },
     {
         icon: "⚙️",
-        title: "Ferramentas & Versionamento",
-        description: "Controle de versão e ferramentas essenciais para o fluxo de trabalho de desenvolvimento.",
-        tags: ["Git", "GitHub", "Terminal", "Lógica de Programação"]
+        title: "Ferramentas & Deploy",
+        description: "Versionamento, colaboração e publicação de aplicações em ambientes de produção.",
+        tags: ["Git", "GitHub", "Branches", "Pull Requests", "Render", "Vercel", "AWS (em estudo)"]
     }
 ];
 
@@ -73,28 +73,42 @@ const softSkills = [
    ========================================== */
 const projects = [
     {
-        title: "SempreON",
-        description: "Projeto desenvolvido para divulgar os serviços da SempreON, empresa especializada em automação residencial.Foram implementadas páginas responsivas, design moderno, animações, navegação fluida e integração com WhatsApp.",
-        image: "assets/images/project-1.1.png",
-        techs: ["JavaScript", "HTML", "CSS", "Responsividade", "Animações", "Integração com WhatsApp"],
-        github: "https://sempreon.vercel.app/",
+        title: "Energy News",
+        description: "Plataforma que centraliza notícias do setor elétrico, com coleta automática e periódica de feeds RSS e Atom. Organiza conteúdos sobre medidores, concessionárias, licitações, contratos e oportunidades por fonte e empresa.",
+        image: "assets/images/energy-news.png",
+        techs: ["C#", ".NET 10", "ASP.NET Core", "Blazor Server", "PostgreSQL", "Entity Framework Core", "xUnit"],
+        status: "Projeto privado • execução local",
+        featured: true,
+        github: "",
         demo: ""
     },
     {
         title: "Controle de Gastos",
-        description: "Aplicação web para gerenciamento de despesas com sistema de categorias e status, seguindo o padrão MVC.",
+        description: "Aplicação web em produção para cadastrar, editar, visualizar e acompanhar despesas, com autenticação, regras de negócio e arquitetura MVC.",
         image: "assets/images/login-bg.png",
-        techs: ["Ruby on Rails", "PostgreSQL", "MVC", "Supabase", "Render"],
-        github: "https://controle-gastos-8q0i.onrender.com/login",
-        demo: ""
+        techs: ["Ruby on Rails", "PostgreSQL", "Supabase", "Render", "MVC"],
+        status: "Projeto em produção",
+        github: "",
+        demo: "https://controle-gastos-8q0i.onrender.com/login"
     },
     {
-        title: "Dashboard Backend",
-        description: "Painel administrativo com APIs para controle de dados, relatórios e operações CRUD.",
-        image: "assets/images/project-3.png",
-        techs: ["Ruby", "SQL", "API REST"],
-        github: "https://github.com/seu-usuario/projeto-3",
-        demo: ""
+        title: "SempreON",
+        description: "Site institucional desenvolvido para uma empresa de automação residencial, com navegação fluida, layout responsivo e contato direto via WhatsApp.",
+        image: "assets/images/project-1.1.png",
+        techs: ["HTML5", "CSS3", "Responsividade", "Vercel"],
+        status: "Projeto entregue",
+        github: "",
+        demo: "https://sempreon.vercel.app/"
+    },
+    {
+        title: "JC Porsch",
+        description: "Interface responsiva criada para praticar composição visual e adaptação consistente para diferentes tamanhos de tela.",
+        image: "",
+        visual: "JC",
+        techs: ["HTML5", "CSS3", "UI responsiva", "Vercel"],
+        status: "Projeto de estudo",
+        github: "",
+        demo: "https://projeto-porsch.vercel.app"
     }
 ];
 
@@ -141,9 +155,12 @@ function renderProjects() {
     if (!grid) return;
 
     grid.innerHTML = projects.map((project, index) => `
-        <div class="project-card animate-on-scroll" style="transition-delay: ${index * 0.15}s">
+        <article class="project-card ${project.featured ? 'project-card--featured' : ''} animate-on-scroll" style="transition-delay: ${index * 0.12}s">
             <div class="project-card__image">
-                <img src="${project.image}" alt="${project.title}" loading="lazy">
+                ${project.image
+                    ? `<img src="${project.image}" alt="Tela do projeto ${project.title}" loading="lazy">`
+                    : `<div class="project-card__placeholder" aria-label="Identidade visual do projeto ${project.title}"><span>${project.visual || project.title.slice(0, 2)}</span><small>${project.title}</small></div>`}
+                ${project.status ? `<span class="project-card__status">${project.status}</span>` : ''}
                 <div class="project-card__overlay">
                     <div class="project-card__overlay-links">
                         ${project.github ? `
@@ -167,8 +184,14 @@ function renderProjects() {
                 <div class="project-card__techs">
                     ${project.techs.map(tech => `<span class="project-tech">${tech}</span>`).join('')}
                 </div>
+                ${(project.github || project.demo) ? `
+                    <div class="project-card__actions">
+                        ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener">Ver código</a>` : ''}
+                        ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener">Abrir projeto ↗</a>` : ''}
+                    </div>
+                ` : `<p class="project-card__private-note">Repositório privado. O projeto foi planejado para execução local enquanto evolui a coleta e a curadoria das fontes.</p>`}
             </div>
-        </div>
+        </article>
     `).join('');
 }
 
@@ -203,11 +226,21 @@ function initNavbar() {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('open');
         overlay.classList.toggle('show');
-        document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+        const isOpen = navMenu.classList.contains('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
     navToggle.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', toggleMenu);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navMenu.classList.contains('open')) {
+            toggleMenu();
+            navToggle.focus();
+        }
+    });
 
     // Fechar menu ao clicar em um link
     navLinks.forEach(link => {
@@ -231,8 +264,12 @@ function initNavbar() {
 
             if (link) {
                 if (scrollPos >= top && scrollPos < top + height) {
-                    navLinks.forEach(l => l.classList.remove('active'));
+                    navLinks.forEach(l => {
+                        l.classList.remove('active');
+                        l.removeAttribute('aria-current');
+                    });
                     link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
                 }
             }
         });
@@ -325,27 +362,15 @@ function initContactForm() {
 
         if (hasError) return;
 
-        // Simulação de envio
+        const subject = encodeURIComponent(`Contato pelo portfólio — ${nameInput.value.trim()}`);
+        const body = encodeURIComponent(
+            `Nome: ${nameInput.value.trim()}\nE-mail: ${emailInput.value.trim()}\n\n${messageInput.value.trim()}`
+        );
+
         submitBtn.disabled = true;
-        submitBtn.innerHTML = `
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            Enviando...
-        `;
-
-        setTimeout(() => {
-            successMsg.classList.add('show');
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = `
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                Enviar mensagem
-            `;
-
-            // Esconde mensagem de sucesso após 5 segundos
-            setTimeout(() => {
-                successMsg.classList.remove('show');
-            }, 5000);
-        }, 1500);
+        successMsg.classList.add('show');
+        window.location.href = `mailto:medeiroslima922@gmail.com?subject=${subject}&body=${body}`;
+        submitBtn.disabled = false;
     });
 }
 
